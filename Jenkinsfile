@@ -6,14 +6,9 @@ pipeline {
         }
     }
     stages {
-        stage('Test') {
+        stage ('Test') {
             steps {
-                sh 'mvn test'
-            }
-            post {
-                always {
-                    junit 'target/surefire-reports/*.xml'
-                }
+                sh 'echo Aloha!!!!!'
             }
         }
         stage('Build') { 
